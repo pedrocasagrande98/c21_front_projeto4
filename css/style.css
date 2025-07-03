@@ -1,0 +1,226 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Cor de fundo preta e cor do texto verde-matrix */
+    background-color: #000000;
+    color: #00FF41;
+    /* Usando a fonte que importamos do Google Fonts */
+    font-family: 'VT323', monospace;
+    /* Uma imagem de fundo sutil para dar a vibe */
+    background-image: url('img\matrix_code.png');
+    background-size: cover;
+    background-attachment: fixed; /* O fundo fica parado ao rolar a página */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
+    padding: 20px 0;
+    position: fixed; /* Deixa o cabeçalho fixo no topo */
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #00FF41;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Alinha o logo à esquerda e a nav à direita */
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2.5em; /* Tamanho do título */
+    text-shadow: 0 0 5px #00FF41; /* Efeito de brilho */
+}
+
+header nav a {
+    color: #00FF41;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+/* Estilos da Seção Hero */
+.hero {
+    background-image: url('../img/pills.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Espaço para não ficar atrás do header */
+}
+.hero-content h2 {
+    font-size: 3em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #00FF41;
+    color: #000000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 2px solid #00FF41;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #00FF41;
+}
+
+.button-red{
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin:10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 2px solid #ff0000;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-red:hover {
+    background-color: #ff000065;
+    color: #00FF41;
+}
+
+
+.button-blue{
+    background-color: #0011ff;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin:10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 2px solid #0011ff7e;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-blue:hover {
+    background-color: #0011ffa8;
+    color: #00FF41;
+}
+
+/* Estilos das outras seções */
+.movie-section {
+    padding: 60px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #00FF41;
+}
+
+.movie-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.movie-section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.poster-gallery {
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza os pôsteres no container */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas menores */
+    gap: 20px; /* Adiciona um espaço de 20px entre os pôsteres */
+    margin-top: 20px; /* Adiciona um espaço acima da galeria */
+}
+
+.poster-image {
+    width: 200px; /* Define uma largura fixa para os pôsteres */
+    height: 200px; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+.poster-image:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 255, 71, 0.4); /* Adiciona uma sombra verde no estilo Matrix */
+}
+
+/* Estilização opcional para o título */
+.container-poster h3 {
+    text-align: center; /* Centraliza o título "Pôster Oficial" */
+    font-size: 2.5em;
+    color: #00FF47; /* Cor verde brilhante */
+    text-transform: uppercase;
+}
+
+/* Estilos do Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 1px solid #00FF41;
+    font-size: 1em;
+}
+
+
+/* Estilos da Seção FAQ */
+.faq-list {
+    list-style: none; /* Remove as bolinhas da lista */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-question {
+    background-color: #0d0d0d;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border: 1px solid #00FF41;
+    font-size: 1.4em;
+    position: relative; /* Necessário para o pseudo-elemento '::after' */
+}
+
+/* Adiciona um sinal de '+' no final de cada pergunta */
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    transition: transform 0.3s;
+}
+
+/* Quando a pergunta estiver ativa, o '+' vira um 'x' */
+.faq-question.is-open::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    /* A resposta começa escondida */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* Animação suave */
+    padding: 0 20px;
+    font-size: 0.8em; /* Fonte um pouco menor que a pergunta */
+    border-left: 2px solid #00FF41;
+    margin-left: 20px;
+}

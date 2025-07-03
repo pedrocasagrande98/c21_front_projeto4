@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix - Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-image: url('img/matrix_code.png');
+            background-repeat: repeat;
+            /* Adicionado para o fundo ficar estático durante a rolagem */
+            background-attachment: fixed;
+        }
+
+        /* Aplicando a camada preta em todas as seções de conteúdo para legibilidade */
+        header, .hero, .movie-section, footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Cor preta com 80% de opacidade */
+            
+            /* Adiciona um respiro (espaçamento) vertical dentro das seções */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">THE MATRIX</h1>
+            <nav>
+                <a href="#sinopse">Sinopse</a>
+                <a href="#poster">Pôster</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Você acredita em destino?</h2>
+                <p>A escolha é sua. </p>
+
+                <a href="https://gifdb.com/images/high/the-matrix-neo-waking-up-to-reality-m11ab3cpzzg09gef.webp" 
+                class="button-red" target="_blank">Pílula vermelha</a>
+
+                <a href="https://static.wikia.nocookie.net/powerlisting/images/2/22/Sentinels_Matrix.gif/revision/latest?cb=20220522132507" taget="_blank" 
+                class="button-blue">Pílula azul</a>
+            </div>
+        </section>
+
+        <section id="sinopse" class="movie-section">
+            <div class="container">
+                <h3>Sinopse</h3>
+                <p>
+                    Em "Matrix", Neo, um hacker, é recrutado por Morpheus ao descobrir que a humanidade é dominada por máquinas, vivendo em uma simulação que os usa como pilhas.
+                    Acreditam que Neo é o Escolhido, o Messias para libertar a humanidade. Ele aprende a desafiar as regras da Matrix, provando seu valor e confirmando seu destino.
+                </p>
+            </div>
+        </section>
+        
+        <section id="poster" class="movie-section">
+            <div class="container-poster">
+                <h3>Pôster</h3>
+                <div class="poster-gallery">
+                    <a href="https://www.imdb.com/pt/title/tt0133093/" target="_blank">
+                        <img src="img/matrix1.jpg" alt="Pôster do filme The Matrix" class="poster-image">
+                    </a>
+                    <a href="https://www.imdb.com/pt/title/tt0234215/" target="_blank">
+                        <img src="img/matrix2.jpg" alt="Pôster do filme The Matrix Reloaded" class="poster-image">
+                    </a>
+                    <a href="https://www.imdb.com/pt/title/tt0242653/" target="_blank">
+                        <img src="img/matrix3.jpg" alt="Pôster do filme The Matrix Revolutions" class="poster-image">
+                    </a>
+                    <a href="https://www.imdb.com/pt/title/tt10838180/" target="_blank">
+                        <img src="img/matrix4.jpg" alt="Pôster do filme The Matrix Resurrections" class="poster-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="movie-section faq">
+            <div class="container">
+                <h3>Perguntas Frequentes</h3>
+                <ul class="faq-list">
+                    <li class="faq-question">
+                        O que é a Matrix?
+                        <div class="faq-answer">
+                            <p>A Matrix é uma realidade simulada, criada por máquinas inteligentes para manter a humanidade sob controle enquanto usam seus corpos como fonte de energia.</p>
+                        </div>
+                    </li>
+                    <li class="faq-question">
+                        Qual a diferença entre a pílula vermelha e a azul?
+                        <div class="faq-answer">
+                            <p>A pílula azul permite que a pessoa permaneça na ignorância confortável da Matrix. A pílula vermelha, por outro lado, liberta a pessoa da simulação, revelando a dura verdade do mundo real.</p>
+                        </div>
+                    </li>
+                    <li class="faq-question">
+                        Quem é o "Escolhido"?
+                        <div class="faq-answer">
+                            <p>O "Escolhido" (The One) é um humano com o poder de manipular a Matrix, quebrando suas regras. Uma profecia diz que ele será o responsável por acabar com a guerra entre humanos e máquinas.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto de estudo Front-End | Baseado nos filmes da quadrilogia The Matrix (1999) - 2021</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
