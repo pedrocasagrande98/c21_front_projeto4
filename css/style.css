@@ -286,8 +286,14 @@ footer {
 /* Celulares (telas menores que 480px) */
 @media (max-width: 480px) {
     header .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack logo and nav vertically */
         text-align: center;
+        padding-top: 10px; /* Adjust padding for stacked header */
+        padding-bottom: 10px; /* Adjust padding for stacked header */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Space between logo and nav */
     }
 
     header nav {
