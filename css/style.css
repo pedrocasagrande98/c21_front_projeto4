@@ -305,23 +305,12 @@ footer {
     }
 
     header .logo {
-        margin-bottom: 10px; /* Space between logo and nav */
+        font-size: 1.8em; /* Smaller font size for logo on very small screens */
+        margin-bottom: 0; /* Remove margin below logo when nav is hidden */
     }
 
     header nav {
-        margin-top: 10px;
-        flex-direction: column; /* Stack navigation links vertically */
-        width: 100%;
-    }
-
-    header nav a {
-        margin: 5px 0; /* Adjust margin for stacked links */
-        padding: 5px 0;
-        border-bottom: 1px solid rgba(0, 255, 65, 0.2); /* Subtle separator */
-    }
-
-    header nav a:last-child {
-        border-bottom: none;
+        display: none; /* Hide navigation completely on very small screens */
     }
 
     .hero {
