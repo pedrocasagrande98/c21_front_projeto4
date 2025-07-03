@@ -31,6 +31,9 @@ header {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #00FF41;
+    min-height: 60px; /* Give the header a minimum height to calculate padding */
+    display: flex; /* Ensure flex properties apply to align items */
+    align-items: center; /* Vertically center content */
 }
 
 header .container {
@@ -38,6 +41,7 @@ header .container {
     justify-content: space-between; /* Alinha o logo à esquerda e a nav à direita */
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    width: 100%; /* Ensure container takes full width */
 }
 
 header .logo {
@@ -75,7 +79,7 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* Espaço para não ficar atrás do header */
+    /* Removed padding-top here as it will be handled by body padding */
 }
 .hero-content {
     max-width: 90%; /* Limit content width on smaller screens */
@@ -237,6 +241,14 @@ footer {
 
 /* Media Queries for Responsiveness */
 
+/* Apply padding to body to account for fixed header on smaller screens */
+@media (max-width: 999px) { /* Changed from 100px to 999px as per request */
+    body {
+        padding-top: 90px; /* Adjust based on your header's actual height when collapsed */
+    }
+}
+
+
 /* Tablets e dispositivos maiores (telas menores que 768px) */
 @media (max-width: 768px) {
     header .logo {
@@ -314,7 +326,7 @@ footer {
 
     .hero {
         height: auto; /* Adjust height for content */
-        padding-top: 100px; /* More space for fixed header */
+        /* Removed padding-top here as it's handled by body padding now */
         padding-bottom: 30px;
     }
 
