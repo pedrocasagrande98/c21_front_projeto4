@@ -241,24 +241,20 @@ footer {
 
 /* Media Queries for Responsiveness */
 
-/* Apply padding to body to account for fixed header on smaller screens */
-@media (max-width: 999px) { /* Changed from 100px to 999px as per request */
+/* Hide header completely for screens smaller than 1000px */
+@media (max-width: 999px) {
+    header {
+        display: none; /* Hide the entire header */
+    }
+
     body {
-        padding-top: 90px; /* Adjust based on your header's actual height when collapsed */
+        padding-top: 0; /* Remove any padding-top added for the header */
     }
 }
 
-
 /* Tablets e dispositivos maiores (telas menores que 768px) */
 @media (max-width: 768px) {
-    header .logo {
-        font-size: 2em;
-    }
-
-    header nav a {
-        font-size: 1em;
-        margin-left: 15px;
-    }
+    /* No need to hide header here as it's already handled by the 999px media query */
 
     .hero-content h2 {
         font-size: 2.5em;
@@ -297,25 +293,10 @@ footer {
 
 /* Celulares (telas menores que 480px) */
 @media (max-width: 480px) {
-    header .container {
-        flex-direction: column; /* Stack logo and nav vertically */
-        text-align: center;
-        padding-top: 10px; /* Adjust padding for stacked header */
-        padding-bottom: 10px; /* Adjust padding for stacked header */
-    }
-
-    header .logo {
-        font-size: 1.8em; /* Smaller font size for logo on very small screens */
-        margin-bottom: 0; /* Remove margin below logo when nav is hidden */
-    }
-
-    header nav {
-        display: none; /* Hide navigation completely on very small screens */
-    }
+    /* No need to hide header here as it's already handled by the 999px media query */
 
     .hero {
         height: auto; /* Adjust height for content */
-        /* Removed padding-top here as it's handled by body padding now */
         padding-bottom: 30px;
     }
 
