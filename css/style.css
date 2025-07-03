@@ -12,7 +12,7 @@ body {
     /* Usando a fonte que importamos do Google Fonts */
     font-family: 'VT323', monospace;
     /* Uma imagem de fundo sutil para dar a vibe */
-    background-image: url('img\matrix_code.png');
+    background-image: url('img/matrix_code.png');
     background-size: cover;
     background-attachment: fixed; /* O fundo fica parado ao rolar a página */
 }
@@ -37,11 +37,18 @@ header .container {
     display: flex;
     justify-content: space-between; /* Alinha o logo à esquerda e a nav à direita */
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 header .logo {
     font-size: 2.5em; /* Tamanho do título */
     text-shadow: 0 0 5px #00FF41; /* Efeito de brilho */
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center nav items when wrapped */
 }
 
 header nav a {
@@ -50,6 +57,7 @@ header nav a {
     margin-left: 20px;
     font-size: 1.2em;
     transition: color 0.3s, text-shadow 0.3s;
+    white-space: nowrap; /* Prevent links from breaking */
 }
 
 header nav a:hover {
@@ -69,8 +77,14 @@ header nav a:hover {
     text-align: center;
     padding-top: 80px; /* Espaço para não ficar atrás do header */
 }
+.hero-content {
+    max-width: 90%; /* Limit content width on smaller screens */
+    padding: 20px; /* Add some padding */
+}
+
 .hero-content h2 {
     font-size: 3em;
+    margin-bottom: 10px; /* Add some space below the heading */
 }
 
 .hero-content p {
@@ -78,14 +92,20 @@ header nav a:hover {
     margin-bottom: 30px;
 }
 
-.button {
-    background-color: #00FF41;
-    color: #000000;
+.button, .button-red, .button-blue {
     padding: 15px 30px;
     text-decoration: none;
     font-size: 1.2em;
-    border: 2px solid #00FF41;
+    border: 2px solid;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Make buttons behave like block elements for margins */
+    margin: 10px; /* Add margin around buttons */
+}
+
+.button {
+    background-color: #00FF41;
+    color: #000000;
+    border-color: #00FF41;
 }
 
 .button:hover {
@@ -96,12 +116,7 @@ header nav a:hover {
 .button-red{
     background-color: #ff0000;
     color: #ffffff;
-    padding: 15px 30px;
-    margin:10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border: 2px solid #ff0000;
-    transition: background-color 0.3s, color 0.3s;
+    border-color: #ff0000;
 }
 .button-red:hover {
     background-color: #ff000065;
@@ -112,12 +127,7 @@ header nav a:hover {
 .button-blue{
     background-color: #0011ff;
     color: #ffffff;
-    padding: 15px 30px;
-    margin:10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border: 2px solid #0011ff7e;
-    transition: background-color 0.3s, color 0.3s;
+    border-color: #0011ff7e;
 }
 .button-blue:hover {
     background-color: #0011ffa8;
@@ -223,4 +233,126 @@ footer {
     font-size: 0.8em; /* Fonte um pouco menor que a pergunta */
     border-left: 2px solid #00FF41;
     margin-left: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets e dispositivos maiores (telas menores que 768px) */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 2em;
+    }
+
+    header nav a {
+        font-size: 1em;
+        margin-left: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .button, .button-red, .button-blue {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .movie-section h3, .container-poster h3 {
+        font-size: 2em;
+    }
+
+    .movie-section p {
+        font-size: 1.1em;
+    }
+
+    .poster-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .faq-question {
+        font-size: 1.2em;
+    }
+
+    .faq-answer {
+        font-size: 0.9em;
+    }
+}
+
+/* Celulares (telas menores que 480px) */
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+        flex-direction: column; /* Stack navigation links vertically */
+        width: 100%;
+    }
+
+    header nav a {
+        margin: 5px 0; /* Adjust margin for stacked links */
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(0, 255, 65, 0.2); /* Subtle separator */
+    }
+
+    header nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero {
+        height: auto; /* Adjust height for content */
+        padding-top: 100px; /* More space for fixed header */
+        padding-bottom: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .button, .button-red, .button-blue {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        display: block; /* Make buttons stack vertically */
+        width: 80%; /* Make buttons take more width */
+        margin: 10px auto; /* Center buttons */
+    }
+
+    .movie-section {
+        padding: 40px 0;
+    }
+
+    .movie-section h3, .container-poster h3 {
+        font-size: 1.8em;
+    }
+
+    .movie-section p {
+        font-size: 1em;
+    }
+
+    .poster-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .faq-answer {
+        font-size: 0.8em;
+        padding: 0 15px;
+        margin-left: 15px;
+    }
 }
